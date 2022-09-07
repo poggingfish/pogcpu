@@ -1,0 +1,35 @@
+LDA 12
+LDB 240
+STB 1
+STA 2
+_start
+ACC
+SWPC
+SWPA
+MLB 1
+CMP
+LDA _done
+JEO
+ACC
+SWPC
+SWPA
+MLB 1
+CMPM
+LDA _not
+JEO
+ACC
+SWPC
+MLA 2
+ADD
+LDA _start
+SPC
+_done
+LDB 1
+LDA _stop
+SPC
+_not
+LDB 0
+LDA _stop
+SPC
+_stop
+SPC
